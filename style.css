@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'source code pro', sans-serif;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0;
+  
+}
+
+nav {
+  border-right: 3px solid #a4daa4;
+  background-color: #92D292; 
+    height: 100vh;
+}
+
+nav header {
+  padding: 15px;
+}
+
+nav a {
+  border-top: 3px solid #a4daa4;
+  color: #000;
+  display: block;
+  padding: 18px;
+  text-decoration: none;
+}
+
+main {
+  background-color: #c7c7c7;
+    flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+section {
+  padding: 25px;
+  line-height: 1.5;
+}
+
+header {
+  
+  font-size: 25px;
+  
+}
+
+pre {
+  background-color: #ddd;
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  
+  body {
+    flex-direction: column;
+  }
+  nav {
+    border-right: none;
+    border-bottom: 3px solid #a4daa4;
+    height: 200px;
+    overflow-y: scroll;
+    width: 100%;
+    
+  }
+  
+  main {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<nav id="navbar">
+  <header><b>CSS Documentation</b> </header>
+
+  <a href="#Introduction_to_CSS" class="nav-link">Introduction to CSS</a>
+  <a href="#Prerequisites" class="nav-link">Prerequisites</a>
+  <a href="#Using_CSS" class="nav-link">Using CSS</a>
+  <a href="#Modules" class="nav-link">Modules</a>
+  <a href="#Solving_Common_CSS_Problems" class="nav-link">Solving Common CSS Problems </a>
+  <a href="#See_Also" class="nav-link">See Also</a>
+
+</nav>
+<main id="main-doc">
+
+  <section class="main-section" id="Introduction_to_CSS">
+    <header><b>Introduction to CSS</b></header>
+
+    <p>Cascading Stylesheets - or <i><b>CSS</b></i> - is the first technology you should start learning after <b>HTML</b>. While HTML is used to define the structure and semantics of your content, CSS is used to style it and lay it out. For example, you can use CSS to alter the font, color, size, and spacing of your content, split into multiple columns, or add animations and other decorative features. </p>
+  </section>
+
+  <section class="main-section" id="Prerequisites">
+    <header><b>Prerequisites</b></header>
+
+    <p>You should learn the basics of HTML before attempting <b>CSS</b>. We recommend that you work through our <b><i>Introduction to HTML</i></b> module first. In that module, you will learn about:</p>
+
+    <ul>
+      <li>CSS, starting with the <b><i>Introduction to CSS</i></b> module</li>
+      <li>More advanced <b><i>HTML modules</i></b></li>
+      <li><b><i>JavaScript</i></b>, and how to use it to add dynamic functionality to web pages</li>
+    </ul>
+
+    <p>Once you understand the fundamentals of <b>HTML</b>, we recommend that you learn HTML and CSS at the same time, moving back and forth between the two topics. This is because HTML is far more interesting and much more fun to learn when you apply CSS, and you can't really learn CSS without knowing HTML.</p>
+
+    <p>Before starting the topic, you should also be familiar with using computers and using the web passively (i.e., just looking at it, comsuming the content). You should have a basic work enviroment set up as detailed in <b><i>Installing basic software</i></b> and understand how to create and manage files, as detailed in <b><i>Dealing with files</i></b> - both of which are parts of our <b><i>Getting started with the web</i></b> complete beginner's module.</p>
+
+    <p>It is recommended that you work through <b><i>Getting started with the web</i></b> before proceeding with this topic. However, doing so isn't absolutely necessary as much of what is covered in <b><i>CSS basics</i></b> article is also covered in our <b><i>CSS first steps</i></b> module, albeit in a lot more detail.</p>
+
+  </section>
+
+  <section class="main-section" id="Using_CSS">
+    <header><b>Using CSS</b></header>
+    <p>There are 3 ways you can use CSS</p>
+    <ul>
+      <li>Inline CSS</li>
+      <li>Internal CSS</li>
+      <li>External CSS</li>
+    </ul>
+
+    <h3><b>Inline CSS</b></h3>
+    <p>Inline CSS allows you to apply a unique style to <b>one HTML element</b> at a time. You assign CSS to a <b>specific HTML element</b> by using the style attribute with and CSS properties defined within it.</p>
+    <p>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property. For example:</p>
+
+    <p>We used the <b>style</b> element for the <b>h1</b> tag and changed the color to blue and aligned the text to the center of the page. We also used the <b>style</b> element for the <b>p</b> tag and changed the color to red.</p>
+    <pre>
+    <code>
+    h1 {
+      color: blue
+      text-align: center
+    }
+    
+   p { color: red; }</code>
+    </pre>
+    <code>
+      <html>
+
+      <h1 style="color:blue;text-align:center;background-color:#c7c7c7;">This is a heading</h1>
+      <p style="color:red;">This is a paragraph.</p>
+
+      </html>
+    </code>
+
+    <h3><b>Internal CSS</b></h3>
+    <ul>
+      <li>You can <b>intergrate</b> internal CSS stylesheets by placing the (<'style'>) element in the (<'head'>) section of a page.</li>
+      <li>Internal styles <b>apply</b> to <b>whole pages</b> but not to multiple HTML documents.</li>
+      <li>Several pages can be styled by <b>repeating</b> the same <b>block</b> of internal styles in them.</li>
+    </ul>
+
+    <p>Internal CSS in HTML means <b>adding CSS code</b> in the (<'head'>) section of the document. Styling changes apply to <b>every</b> specific element found in the file.</p>
+    <p>This example is so you can see how to add the (<'style'>) element containing the CSS rules for all the page:</p>
+
+    <p>Here we have added a background color to the <b>h1</b> tag to linen, the color of the text to maroon.</p>
+    <pre>
+    <code>
+    h1 {
+            background-color: linen;
+            color: maroon;
+            margin-left: 40px;
+          }</code>
+    </pre>
+    <code>
+      <html>
+
+      <head>
+        <style>
+          h1 {
+            background-color: linen;
+            color: maroon;
+            margin-left: 40px;
+          }
+        </style>
+      </head>
+
+      <body>
+
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+
+      </body>
+
+      </html>
+
+    </code>
+    <p>Here we have added a background color to the <b>h1</b> tag to linen, the color of the text to maroon.</p>
+    <h3><b>External CSS</b></h3>
+    <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+
+    <p>Each HTML page must include a reference to the external style sheet file inside the <b>link</b> element, inside the <b>head</b> section.</p>
+    <pre>
+    <code>
+    link rel="stylesheet" type="text/css" href="mystyle.css"
+    
+      h2 {
+          background-color: lightblue;
+          color: navy;
+          margin-left: 20px;
+        }</code>
+    </pre>
+    <code>
+      <html>
+
+      <head>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+      </head>
+
+      <body>
+
+        <h2>This is a heading</h2>
+        <p>This is a paragraph.</p>
+
+      </body>
+
+      </html>
+      <style>
+        h2 {
+          background-color: lightblue;
+          color: navy;
+          margin-left: 20px;
+        }
+      </style>
+    </code>
+
+  </section>
+
+  <section class="main-section" id="Modules">
+    <header><b>Modules</b></header>
+    <p>This topic contains the following modules, in a suggested order for working through them. You should definitely start with the first one.</p>
+
+    <h3><b>CSS first steps</b></h3>
+    <p>CSS (Cascading Style Sheets) is used to style and lay out web pages - for example, to alter tge font, color, size, and spacing of your content, split it into multiply columns, or add animations andother decorative feature. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to your HTML.</p>
+
+    <h3><b>CSS building blocks</b></h3>
+    <p>This module carries on where <b><i>CSS first steps</i></b> left off - now you've gained familiarity with the language and its syntax, and you got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have availble, units, sizing, styling backgrounds and borders, debugging and lots more.</p>
+    <p>The aim here is to provide you with a toolkit for writing CSS and help you understand all the essential theory, before moving on to the more specific disciplines like <b><i>text styling</i></b> and <b><i>CSS layout</i></b>.</p>
+
+    <h3><b>Styling text</b></h3>
+    <p>With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text - one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows and other text features. We round off the module by looking at and applying custom fonts to your page, and styling lists and links.</p>
+
+    <h3><b>CSS layout</b></h3>
+    <p>At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the veiwport, and one another. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.</p>
+
+  </section>
+
+  <section class="main-section" id="Solving_Common_CSS_Problems">
+    <header><b>Solving Common CSS Problems</b></header>
+    <p><b><i>Use CSS to solve common problems</i></b> provides links to sections of content explaining how to use CSS to slove very common problems when creating a web page.</p>
+    <p>From the beginning, you'll primarily apply colors to HTML elements and their backgrounds; change the size, shape, and position of elements; and add and define borders on elements. But there's not much you can't do once you have a solid understanding of even the basics of CSS. One of the best things about learning CSS is that once you know the fundamentals, usually you have a pretty good feel for what can and can't be done, even if you don't actually know how to do it yet!</p>
+
+  </section>
+
+  <section class="main-section" id="See_Also">
+    <header><b>See Also</b></header>
+
+    <h3><b>CSS and MDN</b></h3>
+    <p>The main entry point for CSS documentation on MDN, where you'll find detailed reference documentation for all features of the CSS language. Want to know all the values a property can take? This is a good place to go.</p>
+  </section>
+
+</main>
+
+</html>
+
+<script src=https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js></script>
+<!-- partial -->
+  
+</body>
+</html>
